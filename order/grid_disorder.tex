@@ -1,0 +1,291 @@
+% GNUPLOT: LaTeX picture with Postscript
+\begingroup
+  \makeatletter
+  \providecommand\color[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package color not loaded in conjunction with
+      terminal option `colourtext'%
+    }{See the gnuplot documentation for explanation.%
+    }{Either use 'blacktext' in gnuplot or load the package
+      color.sty in LaTeX.}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\includegraphics[2][]{%
+    \GenericError{(gnuplot) \space\space\space\@spaces}{%
+      Package graphicx or graphics not loaded%
+    }{See the gnuplot documentation for explanation.%
+    }{The gnuplot epslatex terminal needs graphicx.sty or graphics.sty.}%
+    \renewcommand\includegraphics[2][]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \@ifundefined{ifGPcolor}{%
+    \newif\ifGPcolor
+    \GPcolortrue
+  }{}%
+  \@ifundefined{ifGPblacktext}{%
+    \newif\ifGPblacktext
+    \GPblacktextfalse
+  }{}%
+  % define a \g@addto@macro without @ in the name:
+  \let\gplgaddtomacro\g@addto@macro
+  % define empty templates for all commands taking text:
+  \gdef\gplbacktext{}%
+  \gdef\gplfronttext{}%
+  \makeatother
+  \ifGPblacktext
+    % no textcolor at all
+    \def\colorrgb#1{}%
+    \def\colorgray#1{}%
+  \else
+    % gray or color?
+    \ifGPcolor
+      \def\colorrgb#1{\color[rgb]{#1}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color[rgb]{1,0,0}}%
+      \expandafter\def\csname LT1\endcsname{\color[rgb]{0,1,0}}%
+      \expandafter\def\csname LT2\endcsname{\color[rgb]{0,0,1}}%
+      \expandafter\def\csname LT3\endcsname{\color[rgb]{1,0,1}}%
+      \expandafter\def\csname LT4\endcsname{\color[rgb]{0,1,1}}%
+      \expandafter\def\csname LT5\endcsname{\color[rgb]{1,1,0}}%
+      \expandafter\def\csname LT6\endcsname{\color[rgb]{0,0,0}}%
+      \expandafter\def\csname LT7\endcsname{\color[rgb]{1,0.3,0}}%
+      \expandafter\def\csname LT8\endcsname{\color[rgb]{0.5,0.5,0.5}}%
+    \else
+      % gray
+      \def\colorrgb#1{\color{black}}%
+      \def\colorgray#1{\color[gray]{#1}}%
+      \expandafter\def\csname LTw\endcsname{\color{white}}%
+      \expandafter\def\csname LTb\endcsname{\color{black}}%
+      \expandafter\def\csname LTa\endcsname{\color{black}}%
+      \expandafter\def\csname LT0\endcsname{\color{black}}%
+      \expandafter\def\csname LT1\endcsname{\color{black}}%
+      \expandafter\def\csname LT2\endcsname{\color{black}}%
+      \expandafter\def\csname LT3\endcsname{\color{black}}%
+      \expandafter\def\csname LT4\endcsname{\color{black}}%
+      \expandafter\def\csname LT5\endcsname{\color{black}}%
+      \expandafter\def\csname LT6\endcsname{\color{black}}%
+      \expandafter\def\csname LT7\endcsname{\color{black}}%
+      \expandafter\def\csname LT8\endcsname{\color{black}}%
+    \fi
+  \fi
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(7200.00,5040.00)%
+    \gplgaddtomacro\gplbacktext{%
+    }%
+    \gplgaddtomacro\gplfronttext{%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,309){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,399){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,490){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,580){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,670){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,760){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,850){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,941){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1031){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1121){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1211){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1302){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1392){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1482){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1572){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1662){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1753){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1843){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,1933){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2023){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2114){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2204){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2294){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2384){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2474){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2565){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2655){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2745){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2835){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,2925){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3016){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3106){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3196){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3286){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3377){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3467){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3557){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3647){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3737){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3828){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,3918){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4008){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4098){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4189){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4279){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4369){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4459){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4549){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4640){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5822,4730){\makebox(0,0)[l]{\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1224,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1314,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1405,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1495,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1585,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1675,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1765,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1856,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(1946,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2036,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2126,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2217,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2307,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2397,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2487,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2577,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2668,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2758,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2848,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(2938,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3029,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3119,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3209,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3299,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3389,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3480,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3570,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3660,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3750,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3840,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(3931,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4021,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4111,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4201,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4292,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4382,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4472,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4562,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4652,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4743,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4833,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(4923,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5013,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5104,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5194,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5284,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5374,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5464,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5555,4775){\makebox(0,0){\strut{}}}%
+      \colorrgb{1.00,1.00,1.00}%
+      \put(5645,4775){\makebox(0,0){\strut{}}}%
+    }%
+    \gplbacktext
+    \put(0,0){\includegraphics{grid_disorder}}%
+    \gplfronttext
+  \end{picture}%
+\endgroup

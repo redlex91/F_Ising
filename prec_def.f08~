@@ -1,0 +1,10 @@
+module prec_def
+  ! Purpose: this module defines the precision of REAL type
+  implicit none
+  save
+  integer, parameter :: sp = kind( 1.0 ), &
+       dp = selected_real_kind( 2 * precision( 1.0_sp ) ), &
+       qp = selected_real_kind( 2 * precision( 1.0_dp ) ), &
+       prec = dp!SELECTED_REAL_KIND( 6, 37 ) ! this is the chosen precision which
+  ! will be used in the program
+end module prec_def

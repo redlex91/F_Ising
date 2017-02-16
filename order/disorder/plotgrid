@@ -1,0 +1,24 @@
+set palette defined ( -1 "red", 1 "blue" )
+set terminal epslatex  size 3,3 color colortext
+set output 'grid_disorder.tex'
+
+set lmargin at screen 0 
+set rmargin at screen 1.0
+
+set size square
+set x2tics 1 format '' scale 0,1
+set y2tics 1 format '' scale 0,1
+set mx2tics 2
+set my2tics 2
+
+set border lc rgb 'white'
+set grid front mx2tics my2tics lw 1.5 lt -1 lc rgb 'white'
+unset xtics
+unset ytics
+set autoscale fix
+unset key
+
+unset colorbox
+plot "grid" matrix w image notitle
+
+

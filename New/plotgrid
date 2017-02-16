@@ -1,0 +1,12 @@
+set palette defined ( -1 "black", 1 "white" )
+
+set x2tics 1 format '' scale 0,1
+set y2tics 1 format '' scale 0,1
+set mx2tics 2 
+set my2tics 2
+
+set grid front mx2tics my2tics lw 1.5 lt -1 lc rgb 'white'
+set autoscale fix
+plot "grid" matrix w image noti
+
+
